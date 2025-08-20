@@ -74,5 +74,10 @@
       -> In the project section there was flex-reverse-row and flex-reverse-col are also a thing.
       -> In the project section we also learnt that "jsutify-self"(when for a child of flex we want to apply diff allignment on the child than the other childen) also works with flex box.
       -> In the contact me section created coustom react icon using ChatGpt.
+#Creating the form working using EmailJs
+-> Used use ref here , but i used e.target
+->  Used useState to make all the field in the from clear it is react way ,
+->  we could do tha same using this.reset() inside the send email function as inside html element this changes to the very html element(but it would be DOM manipulation would rerender the whole page probably and it is the very thing we avoide in react),
+->also, could have done it using <button type="reset"></button>(html way)
 
                                         
