@@ -76,8 +76,8 @@
       -> In the contact me section created coustom react icon using ChatGpt.
 #Creating the form working using EmailJs
 -> Used use ref here , but i used e.target
-->  Used useState to make all the field in the from clear it is react way ,
-->  we could do tha same using this.reset() inside the send email function as inside html element this changes to the very html element(but it would be DOM manipulation would rerender the whole page probably and it is the very thing we avoide in react),
+->  Used useState to make all the field in the from clear after from submission it is react way ,
+->  we could do tha same using this.reset() inside the sendemail function as inside html element this changes to the very html element(but it would be DOM manipulation would rerender the whole page probably and it is the very thing we avoide in react),
 ->also, could have done it using <button type="reset"></button>(html way)
 
                                         
