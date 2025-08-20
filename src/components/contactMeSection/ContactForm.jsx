@@ -44,8 +44,8 @@ const ContactForm = () => {
       setFormData({name:"",email:"",message:""});
   };
   return (
-    <div className="w-[650px] mt-4">
-      <p className="text-cyan text-2xl mb-2">{successMessage}</p>
+    <div className=" mt-4">
+      <p className="text-cyan text-2xl mb-4">{successMessage}</p>
       <form className="flex flex-col gap-4 text-white" onSubmit={sendEmail}>
         <input name="from_name" type="text" placeholder="Your Name" required className="h-12 rounded-lg bg-lightBrown px-2" 
         value={formData.name} 
