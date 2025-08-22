@@ -1,0 +1,106 @@
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 14px;
+  row-gap: 24px;
+  position: relative; /* Avoid any stacking context issues */
+  z-index: 0; /* Ensure this doesn't interfere with child elements */
+}
+@media (max-width: 750px){
+  .main-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 750.01px) and (max-width:1000px){
+  .main-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1000.01px){
+  .main-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.preview {
+  min-height: 0px;
+  position: relative; /* Allows proper stacking */
+  z-index: 0; /* Keeps it below the .channel */
+}
+.thumbnail-div {
+  position: relative;
+}
+.thumbnail {
+  width: 100%;
+  border-radius: 4%;
+}
+.vedio-info {
+  margin-top: 8px;
+  display: flex;
+  align-items: start;
+}
+.profile-picture {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0;
+}
+.channel {
+  display: flex;
+  position:absolute ;
+  bottom:-35px;
+  left: 39px;
+  border: none;
+  background-color: white;
+  padding-left: 4px;
+  padding-right: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+
+}
+.profile-picture:hover .channel {
+  opacity: 1;
+  z-index: 9999;
+}
+.profile-picture:hover {
+  cursor: pointer;
+}
+.ch-img {
+  width: 40px;
+  border-radius: 50px;
+}
+.about {
+  vertical-align: top;
+}
+.vedio-title {
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 1px;
+  margin-bottom: 10px;
+}
+.channel-name,
+.vedio-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+  margin-top: 4px;
+}
+.time {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: 6px;
+  height: 20px;
+  width: 34px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: black;
+  padding-bottom: 0;
+  align-items: center;
+  border-radius: 4px;
+}

@@ -81,4 +81,27 @@
 ->also, could have done it using <button type="reset"></button>(html way)
 ->Added , successMessage (doing this also using useState)
 
+#Adding Scrolling Effect Upon Click On The Link
+->Install react scroll library npm i react-scroll
+-> import {Link} from 'react-scroll'
+->{
+            Links.map((item,index)=>{
+              return(
+                <li key={index}>
+                  <Link 
+                    to={item.section}//when creating Main file of Each section we gave an id to it the 
+                    item.section bassically contains the id to the container ,thus it the scrolling effect gets linked
+                    smooth={true}
+                    spy={true}
+                    duration={500}
+                    offset={-130}  
+                    className="hover:text-white transition-all duration-500 cursor-pointer">
+                    {item.link}
+                  </Link>
+                </li>
+              )
+            })
+          }
+##Implementing Framer Motion
+Not so difficult just created a fiction varient,js rst is syntax
                                         

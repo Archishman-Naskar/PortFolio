@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      LolTube
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Styles/general.css">
+<link rel="stylesheet" href="Styles/header.css">
+<link rel="stylesheet" href="Styles/contain.css">
+<link rel="stylesheet" href="Styles/sidebar.css">
+<style>
+</style>
+  </head>
+  <body>
+    <div style="border-bottom:solid 1px rgb(204,204,204) ;position: fixed;top: 0;
+    right:0;
+    left: 0; height: 60px; z-index: 1000;">
+      <div style="width: 84px; height: 61px;border: none; 
+      position: absolute;background-color: white;
+      top: 0;left: 0;"></div>
+      <div class="headline">
+        <div class="left-section">
+          <div class="pop-text" style="padding-right: 22px;">
+            <img class="menu" src="images/hamburger-menu.svg" >
+            <div class="tool-tip"><p>Menu</p></div>
+          </div>
+          <div class="pop-text">
+            <img class="logo" src="images/youtube-logo.svg" >
+            <div class="tool-tip" style="bottom: -35px;"><p>Youtube</p></div>
+          </div>
+        </div>
+        <div class="middle-section">
+          <input class="search-box" type="text" placeholder="Search">
+          <div class="pop-text">
+            <button class="search-button" >
+              <img class="search-logo"src="images/search.svg">
+            </button>
+            <div class="tool-tip" style="bottom: -30px;"><p>Search</p></div>
+          </div>
+          <div class="pop-text">
+            <button class="voice-search-button">
+              <img class="voice-search-icon" src="images/voice-search-icon.svg">
+            </button>
+            <div class="tool-tip" style="bottom: -30px;"><p>Voice Search</p></div>
+          </div>
+          
+        </div>
+        <div class="right-section">
+          <div class="pop-text">
+            <button class="upload-button">
+              <img src="images/upload.svg">
+            </button>
+            <div class="tool-tip" style="bottom: -30px;"><p>Create</p></div>
+          </div>
+          <div class="pop-text">
+            <button class="app-button">
+              <img src="images/youtube-apps.svg">
+            </button>
+            <div class="tool-tip" style="bottom: -30px;"><p>Apps</p></div>
+          </div>
+          <div class="pop-text">
+            <button class="notifications-button">
+              <img src="images/notifications.svg">
+            </button>
+            <div class="tool-tip" style="bottom: -30px;"><p>Notifications</p></div>
+          </div>
+          <div class="pop-text">
+            <button class="account-button">
+              <img class="account-img" src="images/unnamed.jpg">
+            </button>
+            <div class="tool-tip" style="bottom: -30px;"><p>Account</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="sidebar-link">
+        <img class="sidebar-link-img" src="images/home.svg">
+        <p class="sidebar-link-title">Home</p>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-link-img" src="images/explore.svg">
+        <p class="sidebar-link-title">Explore</p>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-link-img" src="images/subscriptions.svg">
+        <p class="sidebar-link-title">Subscriptions</p>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-link-img" src="images/originals.svg">
+        <p class="sidebar-link-title">Originals</p>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-link-img" src="images/youtube-music.svg">
+        <p class="sidebar-link-title">Youtube Music</p>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-link-img" src="images/library.svg">
+        <p class="sidebar-link-title">Library</p>
+      </div>
+    </div>
+    <div class="main-grid">
+      <div class="preview" style="z-index: 1;">
+        <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/thumbnail-1.webp" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/c/mkbhd" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channel-1.jpeg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channel-1.jpeg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Marques Brownlee
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      15M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_self">
+              <p class="vedio-title">
+                Talking Tech and AI with Google CEO Sundar Pichai!
+              </p>
+            </a>
+            <a href="https://www.youtube.com/c/mkbhd" target="_self">
+              <p class="channel-name">
+                Marques Brownlee
+              </p>
+            </a>
+            <p class="vedio-stats">
+              3.4M views &#183; 6 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=wHVTBGVMX1g&t=891s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/1.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@VenomsTech" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels1_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels1_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Venom's Tech
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      1.09M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=wHVTBGVMX1g&t=891s" target="_self">
+              <p class="vedio-title">
+                Insane Gaming & Productivity PC Build: Core Ultra 9 285K + RTX 4080
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@VenomsTech" target="_self">
+              <p class="channel-name">
+                Venom's Tech
+              </p>
+            </a>
+            <p class="vedio-stats">
+              83K  views &#183; 2 days ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/2.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels2_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels2_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harshit Trehan
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      73.6k subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+              <p class="vedio-title">
+                How I learnt DSA and Cracked 5+ Job offers | Atlassian, Juspay, BNY Mellon, TCS, Infosys
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+              <p class="channel-name">
+                Harshit Trehan
+              </p>
+            </a>
+            <p class="vedio-stats">
+              443K  views &#183; 8 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/3.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harkirat1" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels3_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels3_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harkirat Singh
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      1.09M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+              <p class="vedio-title">
+                E-Commerce clone will not get you hired - Real world project ideas
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harkirat1" target="_self">
+              <p class="channel-name">
+                Harkirat Singh
+              </p>
+            </a>
+            <p class="vedio-stats">
+              265K  views &#183; 2 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc&t=22159s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/4.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@SuperSimpleDev" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels4_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels4_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      SuperSimpleDev
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      575K subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc&t=22159s" target="_self">
+              <p class="vedio-title">
+                HTML & CSS Full Course - Beginner to Pro
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@SuperSimpleDev" target="_self">
+              <p class="channel-name">
+                SuperSimpleDev
+              </p>
+            </a>
+            <p class="vedio-stats">
+              13M  views &#183; 2 yearss ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+      
+      
+      
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/2.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels2_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels2_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harshit Trehan
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      73.6k subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+              <p class="vedio-title">
+                How I learnt DSA and Cracked 5+ Job offers | Atlassian, Juspay, BNY Mellon, TCS, Infosys
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+              <p class="channel-name">
+                Harshit Trehan
+              </p>
+            </a>
+            <p class="vedio-stats">
+              443K  views &#183; 8 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/3.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harkirat1" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels3_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels3_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harkirat Singh
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      1.09M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+              <p class="vedio-title">
+                E-Commerce clone will not get you hired - Real world project ideas
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harkirat1" target="_self">
+              <p class="channel-name">
+                Harkirat Singh
+              </p>
+            </a>
+            <p class="vedio-stats">
+              265K  views &#183; 2 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=wHVTBGVMX1g&t=891s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/1.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@VenomsTech" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels1_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels1_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Venom's Tech
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      1.09M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=wHVTBGVMX1g&t=891s" target="_self">
+              <p class="vedio-title">
+                Insane Gaming & Productivity PC Build: Core Ultra 9 285K + RTX 4080
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@VenomsTech" target="_self">
+              <p class="channel-name">
+                Venom's Tech
+              </p>
+            </a>
+            <p class="vedio-stats">
+              83K  views &#183; 2 days ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/2.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels2_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels2_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harshit Trehan
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      73.6k subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+              <p class="vedio-title">
+                How I learnt DSA and Cracked 5+ Job offers | Atlassian, Juspay, BNY Mellon, TCS, Infosys
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+              <p class="channel-name">
+                Harshit Trehan
+              </p>
+            </a>
+            <p class="vedio-stats">
+              443K  views &#183; 8 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/3.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harkirat1" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels3_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels3_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harkirat Singh
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      1.09M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+              <p class="vedio-title">
+                E-Commerce clone will not get you hired - Real world project ideas
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harkirat1" target="_self">
+              <p class="channel-name">
+                Harkirat Singh
+              </p>
+            </a>
+            <p class="vedio-stats">
+              265K  views &#183; 2 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc&t=22159s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/4.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@SuperSimpleDev" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels4_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels4_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      SuperSimpleDev
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      575K subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc&t=22159s" target="_self">
+              <p class="vedio-title">
+                HTML & CSS Full Course - Beginner to Pro
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@SuperSimpleDev" target="_self">
+              <p class="channel-name">
+                SuperSimpleDev
+              </p>
+            </a>
+            <p class="vedio-stats">
+              13M  views &#183; 2 yearss ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+      
+      
+      
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/2.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels2_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels2_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harshit Trehan
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      73.6k subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+              <p class="vedio-title">
+                How I learnt DSA and Cracked 5+ Job offers | Atlassian, Juspay, BNY Mellon, TCS, Infosys
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+              <p class="channel-name">
+                Harshit Trehan
+              </p>
+            </a>
+            <p class="vedio-stats">
+              443K  views &#183; 8 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/3.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harkirat1" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels3_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels3_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harkirat Singh
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      1.09M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+              <p class="vedio-title">
+                E-Commerce clone will not get you hired - Real world project ideas
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harkirat1" target="_self">
+              <p class="channel-name">
+                Harkirat Singh
+              </p>
+            </a>
+            <p class="vedio-stats">
+              265K  views &#183; 2 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=wHVTBGVMX1g&t=891s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/1.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@VenomsTech" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels1_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels1_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Venom's Tech
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      1.09M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=wHVTBGVMX1g&t=891s" target="_self">
+              <p class="vedio-title">
+                Insane Gaming & Productivity PC Build: Core Ultra 9 285K + RTX 4080
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@VenomsTech" target="_self">
+              <p class="channel-name">
+                Venom's Tech
+              </p>
+            </a>
+            <p class="vedio-stats">
+              83K  views &#183; 2 days ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/2.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels2_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels2_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harshit Trehan
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      73.6k subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+              <p class="vedio-title">
+                How I learnt DSA and Cracked 5+ Job offers | Atlassian, Juspay, BNY Mellon, TCS, Infosys
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+              <p class="channel-name">
+                Harshit Trehan
+              </p>
+            </a>
+            <p class="vedio-stats">
+              443K  views &#183; 8 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/3.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harkirat1" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels3_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels3_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harkirat Singh
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      1.09M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+              <p class="vedio-title">
+                E-Commerce clone will not get you hired - Real world project ideas
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harkirat1" target="_self">
+              <p class="channel-name">
+                Harkirat Singh
+              </p>
+            </a>
+            <p class="vedio-stats">
+              265K  views &#183; 2 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc&t=22159s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/4.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@SuperSimpleDev" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels4_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels4_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      SuperSimpleDev
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      575K subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc&t=22159s" target="_self">
+              <p class="vedio-title">
+                HTML & CSS Full Course - Beginner to Pro
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@SuperSimpleDev" target="_self">
+              <p class="channel-name">
+                SuperSimpleDev
+              </p>
+            </a>
+            <p class="vedio-stats">
+              13M  views &#183; 2 yearss ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+      
+      
+      
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/2.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels2_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels2_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harshit Trehan
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      73.6k subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+              <p class="vedio-title">
+                How I learnt DSA and Cracked 5+ Job offers | Atlassian, Juspay, BNY Mellon, TCS, Infosys
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+              <p class="channel-name">
+                Harshit Trehan
+              </p>
+            </a>
+            <p class="vedio-stats">
+              443K  views &#183; 8 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/3.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harkirat1" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels3_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels3_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harkirat Singh
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      1.09M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+              <p class="vedio-title">
+                E-Commerce clone will not get you hired - Real world project ideas
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harkirat1" target="_self">
+              <p class="channel-name">
+                Harkirat Singh
+              </p>
+            </a>
+            <p class="vedio-stats">
+              265K  views &#183; 2 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=wHVTBGVMX1g&t=891s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/1.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@VenomsTech" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels1_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels1_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Venom's Tech
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      1.09M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=wHVTBGVMX1g&t=891s" target="_self">
+              <p class="vedio-title">
+                Insane Gaming & Productivity PC Build: Core Ultra 9 285K + RTX 4080
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@VenomsTech" target="_self">
+              <p class="channel-name">
+                Venom's Tech
+              </p>
+            </a>
+            <p class="vedio-stats">
+              83K  views &#183; 2 days ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/2.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels2_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels2_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harshit Trehan
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      73.6k subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=W-_qnPYxHdU&t=1s" target="_self">
+              <p class="vedio-title">
+                How I learnt DSA and Cracked 5+ Job offers | Atlassian, Juspay, BNY Mellon, TCS, Infosys
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harshitt_trehan18" target="_self">
+              <p class="channel-name">
+                Harshit Trehan
+              </p>
+            </a>
+            <p class="vedio-stats">
+              443K  views &#183; 8 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/3.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@harkirat1" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels3_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels3_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Harkirat Singh
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      1.09M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=0BDt08x-De8&t=4s" target="_self">
+              <p class="vedio-title">
+                E-Commerce clone will not get you hired - Real world project ideas
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@harkirat1" target="_self">
+              <p class="channel-name">
+                Harkirat Singh
+              </p>
+            </a>
+            <p class="vedio-stats">
+              265K  views &#183; 2 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+       
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/thumbnail-1.webp" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/c/mkbhd" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channel-1.jpeg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channel-1.jpeg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Marques Brownlee
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      15M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_self">
+              <p class="vedio-title">
+                Talking Tech and AI with Google CEO Sundar Pichai!
+              </p>
+            </a>
+            <a href="https://www.youtube.com/c/mkbhd" target="_self">
+              <p class="channel-name">
+                Marques Brownlee
+              </p>
+            </a>
+            <p class="vedio-stats">
+              3.4M views &#183; 6 months ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+
+
+      <div class="preview">
+        <a href="https://www.youtube.com/watch?v=wHVTBGVMX1g&t=891s" target="_self">
+          <div class="thumbnail-div">
+            <img class="thumbnail" src="images/1.avif" >
+            <div class="time"><p style="color: white; font-size: 13px;">10:00</p></div>
+          </div>
+        </a>
+        <div class="vedio-info">
+          <a href="https://www.youtube.com/@VenomsTech" target="_self">
+            <div class="profile-picture" style="height: 40px;width: 40px;">
+              <img class="ch-img" src="images/channels1_profile.jpg">
+              <div class="channel">
+                <div class="vedio-info">
+                  <div class="profile-picture">
+                    <img class="ch-img" style="width: 50px;" src="images/channels1_profile.jpg">
+                  </div>
+                  <div class="about">
+                    <p class="channel-name" style="margin-left: 10px; 
+                    font-size: large; font-weight: 500;
+                    color: black;">
+                      Venom's Tech
+                    </p>
+                    <p class="vedio-stats" style="margin-left: 11px;">
+                      1.09M subscribers
+                    </p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </a>
+          
+          <div class="about" style="flex: 1; padding-left: 10px;">
+            <a href="https://www.youtube.com/watch?v=wHVTBGVMX1g&t=891s" target="_self">
+              <p class="vedio-title">
+                Insane Gaming & Productivity PC Build: Core Ultra 9 285K + RTX 4080
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@VenomsTech" target="_self">
+              <p class="channel-name">
+                Venom's Tech
+              </p>
+            </a>
+            <p class="vedio-stats">
+              83K  views &#183; 2 days ago 
+            </p>
+          </div>
+        </div>   
+      </div>
+
+      
+
+
+
+      
+      
+      
+      
+      
+    </div>
+    
+  </body>
+</html>

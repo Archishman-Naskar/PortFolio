@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Enhanced To-Do List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .input-section {
+            padding: 30px;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 200px auto auto;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: #f9fafb;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #4facfe;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+        }
+
+        .form-input::placeholder {
+            color: #9ca3af;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #feca57 0%, #ff9ff3 100%);
+            color: white;
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+
+        .btn-move {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            font-weight: 600;
+            opacity: 0;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .success-message.show {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .todo-list {
+            padding: 0 30px 30px;
+        }
+
+        .todo-item {
+            display: grid;
+            grid-template-columns: 2fr 1fr auto auto auto auto;
+            gap: 15px;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 15px;
+            background: white;
+            border-radius: 15px;
+            border: 2px solid #f1f3f4;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .todo-item:hover {
+            border-color: #4facfe;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .todo-content {
+            background: #f8fafc;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border-left: 4px solid #4facfe;
+        }
+
+        .todo-content p {
+            font-size: 16px;
+            font-weight: 500;
+            color: #2d3748;
+            margin: 0;
+        }
+
+        .todo-date {
+            background: #fff7ed;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .todo-date p {
+            font-size: 14px;
+            font-weight: 500;
+            color: #92400e;
+            margin: 0;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6b7280;
+        }
+
+        .empty-state-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #374151;
+        }
+
+        .empty-state p {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .input-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .todo-item {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .edit-mode .todo-content {
+            background: #fef3c7;
+            border-left-color: #f59e0b;
+        }
+
+        .date-input {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ My To-Do List</h1>
+            <p>Stay organized and get things done</p>
+        </div>
+
+        <div class="input-section">
+            <div class="input-grid">
+                <div class="form-group">
+                    <input type="text" class="form-input event-input" placeholder="What needs to be done?" id="eventInput">
+                </div>
+                <div class="form-group">
+                    <input type="date" class="form-input date-input" id="dateInput">
+                </div>
+                <button class="btn btn-primary" onclick="addTodo()">
+                    ➕ Add Task
+                </button>
+                <div class="success-message" id="successMessage">
+                    ✅ Task Added Successfully!
+                </div>
+            </div>
+        </div>
+
+        <div class="todo-list">
+            <div class="todo-container" id="todoContainer">
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-state-icon">📝</div>
+                    <h3>No tasks yet</h3>
+                    <p>Add your first task to get started!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let todos = [];
+        let editingIndex = -1;
+
+        function addTodo() {
+            const eventInput = document.getElementById('eventInput');
+            const dateInput = document.getElementById('dateInput');
+            
+            const event = eventInput.value.trim();
+            const date = dateInput.value;
+            
+            if (!event) {
+                alert('Please enter a task!');
+                return;
+            }
+            
+            if (editingIndex >= 0) {
+                // Update existing todo
+                todos[editingIndex] = { event, date };
+                document.querySelector('.btn-primary').innerHTML = '➕ Add Task';
+            } else {
+                // Add new todo
+                todos.push({ event, date });
+            }
+            
+            eventInput.value = '';
+            dateInput.value = '';
+            
+            renderTodos();
+            showSuccessMessage();
+        }
+
+        function renderTodos() {
+            const container = document.getElementById('todoContainer');
+            const emptyState = document.getElementById('emptyState');
+            
+            if (todos.length === 0) {
+                container.innerHTML = '';
+                container.appendChild(emptyState);
+                return;
+            }
+            
+            let html = '';
+            todos.forEach((todo, index) => {
+                const formattedDate = todo.date ? formatDate(todo.date) : 'No date set';
+                html += `
+                    <div class="todo-item" data-index="${index}">
+                        <div class="todo-content">
+                            <p>${escapeHtml(todo.event)}</p>
+                        </div>
+                        <div class="todo-date">
+                            <p>${formattedDate}</p>
+                        </div>
+                        <button class="btn btn-success" onclick="editTodo(${index})" title="Edit task">
+                            ✏️ Edit
+                        </button>
+                        <button class="btn btn-danger" onclick="deleteTodo(${index})" title="Delete task">
+                            🗑️ Delete
+                        </button>
+                        <button class="btn btn-move" onclick="moveUp(${index})" title="Move up" ${index === 0 ? 'disabled' : ''}>
+                            ↑
+                        </button>
+                        <button class="btn btn-move" onclick="moveDown(${index})" title="Move down" ${index === todos.length - 1 ? 'disabled' : ''}>
+                            ↓
+                        </button>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        function deleteTodo(index) {
+            if (confirm('Are you sure you want to delete this task?')) {
+                todos.splice(index, 1);
+                renderTodos();
+            }
+        }
+
+        function editTodo(index) {
+            const todo = todos[index];
+            document.getElementById('eventInput').value = todo.event;
+            document.getElementById('dateInput').value = todo.date;
+            
+            editingIndex = index;
+            document.querySelector('.btn-primary').innerHTML = '💾 Update Task';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function moveUp(index) {
+            if (index > 0) {
+                [todos[index], todos[index - 1]] = [todos[index - 1], todos[index]];
+                renderTodos();
+            }
+        }
+
+        function moveDown(index) {
+            if (index < todos.length - 1) {
+                [todos[index], todos[index + 1]] = [todos[index + 1], todos[index]];
+                renderTodos();
+            }
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return 'No date set';
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        let showing = false;
+        let timeoutId = null; // Store the timeout ID
+
+        function showSuccessMessage() {
+            const message = document.getElementById('successMessage');
+            
+            if (showing) {
+                // Cancel the existing timeout
+                clearTimeout(timeoutId);
+                
+                // Immediately do what was going to happen after 2000ms
+                message.classList.remove('show');
+                document.getElementById('successMessage').innerHTML = '✅ Task Added Successfully!';
+                showing = false;
+            }
+            
+            // Start new animation
+            showing = true;
+            message.classList.add('show');
+            if(editingIndex >= 0){
+              editingIndex = -1;
+              document.getElementById('successMessage').innerHTML='✅ Task Updated Successfully!';
+            }
+            // Set new timeout and store its ID
+            timeoutId = setTimeout(() => {
+                message.classList.remove('show');
+                document.getElementById('successMessage').innerHTML = '✅ Task Added Successfully!';
+                showing = false;
+            }, 2000);
+        }
+
+        // Add event listeners for Enter key
+        document.getElementById('eventInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                addTodo();
+            }
+        });
+
+        document.getElementById('dateInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                addTodo();
+            }
+        });
+
+        // Initialize
+        renderTodos();
+    </script>
+</body>
+</html>

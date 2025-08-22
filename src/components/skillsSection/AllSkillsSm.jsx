@@ -6,6 +6,8 @@ import { DiJavascript } from "react-icons/di";
 import { FaReact } from "react-icons/fa6";
 import { SiRedux } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
+import {motion} from "framer-motion";
+import { fadeIn } from '../../framerMotion/varients'; 
 
 import SkillSingle from './SkillSingle';
 const skills = [
@@ -42,10 +44,15 @@ const AllSkillsSm = () => {
       {
         skills.map((item,index)=>{
           return(
-            <div key={index} className="flex flex-col items-center">
+            <motion.div
+                                variants={fadeIn("up",0.2)}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{once:false,amount:0.7}}
+                                 key={index} className="flex flex-col items-center">
               <item.icon className="text-7xl text-orange"/>
               <p className="text-center mt-4 text-white">{item.skill}</p>
-            </div>
+            </motion.div>
           );
         })
       }

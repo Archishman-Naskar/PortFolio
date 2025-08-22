@@ -1,0 +1,158 @@
+.headline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  right:0;
+  left: 0;
+  background-color: white;
+  border:none;
+  z-index: 1000;
+}
+.left-section {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin-right: 70px;
+  margin-left: 20px;
+}
+.middle-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.right-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+  width: 200px;
+  margin-left: 50px;
+  margin-right: 25px;
+}
+.menu {
+  width: 25px;
+  /*margin-right: 22px;*/
+}
+.logo {
+  height: 21px;
+}
+.logo:hover,
+.menu:hover,
+.search-button:hover,
+.voice-search-button:hover {
+  cursor: pointer;
+}
+.search-box {
+  font-size: 16px;
+  flex: 1;
+  max-width: 450px;
+  min-width: 0px;
+  height: 36px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(204,204,204);
+  padding-left: 15px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px ;
+  box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.17);
+}
+.search-box::placeholder {
+  font-family: Roboto,Arial;
+  font-size: 18px;
+  font-weight: 400;
+}
+.search-box:hover {
+  cursor:text;
+}
+.search-button {
+  height: 39.5px;
+  width: 68px;
+  border-style: solid;
+  border-width: 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(204,204,204);
+  background-color: rgba(237, 231, 231, 0.559);
+  margin-left: -1px;
+  margin-right: 8px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px ;
+}
+.search-logo {
+  height: 25px;
+  vertical-align: middle;
+}
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(224, 219, 219, 0.275);
+  border-radius: 20px;
+  border: none;
+}
+.voice-search-icon {
+  height: 25px;
+  vertical-align: middle;
+}
+.upload-button {
+  height: 30px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.app-button {
+  height: 30px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.notifications-button {
+  height: 30px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.account-button {
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.account-img {
+  border-radius: 50%;
+}
+.upload-button:hover,
+.app-button:hover,
+.notifications-button:hover,
+.account-button:hover,
+.account-img:hover {
+  cursor: pointer;
+}
+.pop-text {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  position: relative;
+}
+.tool-tip {
+
+  position:absolute ;
+  bottom:-25px;
+  border: none;
+  background-color: rgb(209, 206, 206);
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 4px;
+  opacity: 0;
+}
+.pop-text:hover .tool-tip {
+  opacity: 1;
+}
+.pop-text .tool-tip {
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
