@@ -10,7 +10,7 @@ const AboutMeMain = () => {
             variants={fadeIn("right",0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{once:false,amount:0.7}}
+            viewport={{once:false,amount:0}}
              >
         <AboutMeText />
       </motion.div>
