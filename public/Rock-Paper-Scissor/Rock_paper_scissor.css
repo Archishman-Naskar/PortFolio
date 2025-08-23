@@ -5,7 +5,6 @@ p {
 }
 body {
   background-color: black;
-  padding-left: 480px;
 }
 .play-icon-img {
   width: 93px;
@@ -20,8 +19,7 @@ body {
 .play-icon:hover {
   cursor: pointer;
 }
-.reset-button,
-.auto-play-button,
+
 .yes,
 .no  {
   width: fit-content;
@@ -31,12 +29,16 @@ body {
   border-radius: 8px;
   margin-right: 20px;
 }
-.auto-play-button {
-  margin-left: 90px;
+.reset-button,
+.auto-play-button{
+  width: fit-content;
+  padding: 6px 10px;
+  font-size: 27px;
+  border: none;
+  border-radius: 8px;
+  
 }
-.reset-button {
-  margin-left: 45px;
-}
+
 .reset-button:hover,
 .auto-play-button:hover,
 .yes:hover,
@@ -56,4 +58,55 @@ body {
   font-family: Arial;
   margin-top: 40px;
   width: 100%;
+}
+
+.mainc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+@media (max-width: 600px) {
+  /* Stack the three icons in one column */
+  .mainc > div:first-of-type {
+    flex-direction: column;
+    align-items: center;
+    padding: 0; /* remove side padding */
+  }
+
+  .play-icon {
+    margin: 10px 0; /* spacing between icons */
+  }
+
+  /* Center buttons below icons */
+  .reset-button,
+  .auto-play-button {
+    display: block;
+  }
+
+  /* Alert text & buttons stacked better on small screens */
+  .alert {
+    flex-direction: column;
+    text-align: center;
+    white-space: normal;
+  }
+  .alert button {
+    margin: 10px 0;
+  }
+}
+
+.play-bton{
+  display: flex;
+  justify-content: space-around;
+}
+
+.title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  color: white;
 }
