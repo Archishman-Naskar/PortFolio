@@ -132,3 +132,8 @@ function caution(){
 //document.querySelector(".text").classList.contains('other-class')
 //classlist is used to add , remove and check wheather any class is linked with the element we are checking
 //here we donot have any need to add (.) before class name 
+
+document.querySelector(".mainc p").addEventListener("click", () => {
+  const box = document.getElementById("manual-box");
+  box.style.display = (box.style.display === "block") ? "none" : "block";
+});
