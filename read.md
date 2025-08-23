@@ -104,4 +104,35 @@
           }
 ##Implementing Framer Motion
 Not so difficult just created a fiction varient,js rst is syntax
-                                        
+ ****At the last it was verydifficult to handle the heropic but by editing the previous responsive styling which was given coustom sizes we removed it and added new responsive styling with sizes that goes screen size . The main problem we had nothing as such when sreen size is less than sm .The problem is resolve with new responsive code where the size of the pic is not hard coded but according the size of the container****
+                                  
+import React from 'react'
+import { PiHexagonBold } from "react-icons/pi";
+import { motion } from "framer-motion";
+import { fadeIn } from '../../framerMotion/varients';
+
+const HeroPic = () => {
+  return (
+    <motion.div
+      variants={fadeIn("left", 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0 }}
+      className="relative flex justify-center items-center w-full max-w-sm sm:max-w-md md:max-w-lg aspect-square overflow-hidden"
+    >
+      {/* Main Image */}
+      <img
+        src="https://i.pinimg.com/736x/93/06/5e/93065e53a0ba979174d6de26387c4751.jpg"
+        alt="SunGod"
+        className="w-4/5 h-4/5 object-cover rounded-full"
+      />
+
+      {/* Hexagon Background */}
+      <div className="absolute inset-0 -z-10 flex justify-center items-center animate-pulse">
+        <PiHexagonBold className="w-full h-full text-yellow-300 blur-md animate-[spin_20s_linear_infinite]" />
+      </div>
+    </motion.div>
+  )
+}
+
+export default HeroPic
